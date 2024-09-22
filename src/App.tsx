@@ -1,11 +1,13 @@
-import "./App.css";
-import css from ".//components/header.module.css";
-import a from ".//components/mainpage.module.css";
-import b from ".//components/Slider.module.css";
-import c from ".//components/packets.module.css";
+import "./global.css";
+import css from "./components/header.module.css";
+import a from "./components/main-page.module.css";
+import b from "./components/slider.module.css";
+import c from "./components/packets.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ZIndex } from "./utils/z-index";
+import { slides } from "./slides";
 
 function App() {
     return (
@@ -18,19 +20,47 @@ function App() {
     );
 }
 
+const Nav = {
+    main: "/",
+    card: {
+        base: "/card",
+        withId: (id: string) => `/card/${id}`,
+    },
+    orders: {
+        base: "/orders",
+        type: {
+            withId: (id: string) => `/orders/type/${id}`,
+        },
+        sales: {
+            test: "/orders/sales/test",
+        },
+    },
+};
+
+// /orders
+// /orders/type/5
+// /orders/sales/test
+
+{
+    /* <Route to={Nav.card.withId(':id')} element={<cardDetails />}>
+<Link to={Nav.card.withId('79')}></Link> */
+}
+
 function Header() {
     return (
         <>
-            <header className={css.header}>
+            <header className={css.header} style={{ zIndex: ZIndex.Header }}>
                 <div className={css.div}>
                     <p className={css.logo}>GoldenBar</p>
                 </div>
 
                 <div className={css.div}>
-                    <p className={css.header__p}>Информация</p>
+                    <p className={css.headerTitle}>Информация</p>
                     <p className={css.header__p}>Контакты</p>
                     <p className={css.header__p}>Коктейли</p>
-                    <p className={css.header__p}>Предложения</p>
+                    <a href="#packages">
+                        <p className={css.header__p}>Предложения</p>
+                    </a>
                 </div>
                 <div className={css.svg__container}>
                     <svg
@@ -87,45 +117,6 @@ function MySlider() {
         slidesToScroll: 1,
     };
 
-    type Slide = {
-        id: number;
-        image: string;
-        text: string;
-    };
-
-    const slides: Slide[] = [
-        {
-            id: 1,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Порно стар Евгений!",
-        },
-        {
-            id: 2,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Banana time!",
-        },
-        {
-            id: 3,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "еще какой то коктейль!",
-        },
-        {
-            id: 4,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это четвертый слайд!",
-        },
-        {
-            id: 5,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это 5 слайд!",
-        },
-        {
-            id: 6,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это 555 слайд!",
-        },
-    ];
-
     return (
         <section className={b.section}>
             <div className={b.main__section}>
@@ -146,58 +137,58 @@ function MySlider() {
     );
 }
 
-function Packets() {
-    type Packet = {
-        name: string;
-        photo: string;
-        price: string;
-    };
+type Packet = {
+    name: string;
+    photo: string;
+    price: string;
+};
 
+function Packets() {
     const packets: Packet[] = [
         {
             name: "Винное казино",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Коктейльное казино",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Пирамида игристого",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Коктейльная пирамида",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Дегустация",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Тематический ужин",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
             name: "Выездной коктейльный бар",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
         {
-            name: "Кальянный ссервис",
+            name: "Кальянный сервис",
             photo: "https://via.placeholder.com/600x300?text=Slide+1",
-            price: "30000р.",
+            price: "30000",
         },
     ];
 
     return (
-        <section className={c.section}>
+        <section className={c.section} id="packages">
             <h1 className={c.h1}>Пакетные предложения</h1>
             <div className={c.container}>
                 {packets.map((packet) => (
