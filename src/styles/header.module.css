@@ -16,6 +16,7 @@
     transition: 0.22s ease;
     cursor: pointer;
     padding-left: 30px;
+    font-weight: 500;
 }
 
 .logo:hover {
@@ -26,10 +27,11 @@
     color: white;
     transition: 0.22s ease;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .header__p:hover {
-    /* transform: translateY(-2.3px); */
     transform: scale(1.05) translateY(-2px);
 }
 

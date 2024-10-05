@@ -1,4 +1,12 @@
-.main__section {
+.section {
+    background-color: #222;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
     width: 900px;
     margin: auto;
 }
@@ -15,13 +23,13 @@
     text-align: center;
     font-weight: 400;
     font-size: 35px;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .p {
-    font-size: 20px;
-    font-weight: 300px;
-    color: #222;
+    font-size: 18px;
+    color: #ffffff;
     padding-left: 10px;
+    font-weight: 500;
 }

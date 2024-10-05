@@ -1,0 +1,31 @@
+.title {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infBtn {
+    padding: 5px;
+    background-color: white;
+    color: #222;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 12x;
+    font-weight: 600;
+}
+
+.img {
+    border-radius: 5px;
+    height: 400px;
+}
