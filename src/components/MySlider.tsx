@@ -1,5 +1,6 @@
-import Slider from "react-slick";
+import Slider, { CustomArrowProps } from "react-slick";
 import b from "/src/styles/slider.module.css";
+import { slides } from "./slides";
 
 export function MySlider() {
     const settings = {
@@ -12,7 +13,7 @@ export function MySlider() {
         prevArrow: <SamplePrevArrow />,
     };
 
-    function SampleNextArrow(props: any) {
+    function SampleNextArrow(props: CustomArrowProps) {
         const { className, style, onClick } = props;
         return (
             <div
@@ -28,7 +29,7 @@ export function MySlider() {
         );
     }
 
-    function SamplePrevArrow(props: any) {
+    function SamplePrevArrow(props: CustomArrowProps) {
         const { className, style, onClick } = props;
         return (
             <div
@@ -43,45 +44,6 @@ export function MySlider() {
             />
         );
     }
-
-    type Slide = {
-        id: number;
-        image: string;
-        text: string;
-    };
-
-    const slides: Slide[] = [
-        {
-            id: 1,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Жека стар Евгений!",
-        },
-        {
-            id: 2,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Banana time!",
-        },
-        {
-            id: 3,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "еще какой то коктейль!",
-        },
-        {
-            id: 4,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это четвертый слайд!",
-        },
-        {
-            id: 5,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это 5 слайд!",
-        },
-        {
-            id: 6,
-            image: "https://via.placeholder.com/600x300?text=Slide+1",
-            text: "Это 555 слайд!",
-        },
-    ];
 
     return (
         <section className={b.section} id="coctails">

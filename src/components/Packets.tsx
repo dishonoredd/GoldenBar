@@ -1,5 +1,3 @@
-import { Route, Routes } from "react-router-dom";
-import { CardDetail } from "./CardDetail";
 import { Card } from "./Card";
 import c from "/src/styles/packets.module.css";
 
@@ -56,26 +54,17 @@ export function Packets() {
     return (
         <section className={c.section} id="packages">
             <h1 className={c.h1}>Пакетные предложения</h1>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <div className={c.container}>
-                            {packets.map((packet, i) => (
-                                <Card
-                                    key={i}
-                                    id={i}
-                                    name={packet.name}
-                                    photo={packet.photo}
-                                    price={packet.price}
-                                />
-                            ))}
-                        </div>
-                    }
-                />
-
-                <Route path="/card/:id" element={<CardDetail />} />
-            </Routes>
+            <div className={c.container}>
+                {packets.map((packet, i) => (
+                    <Card
+                        key={i}
+                        id={i}
+                        name={packet.name}
+                        photo={packet.photo}
+                        price={packet.price}
+                    />
+                ))}
+            </div>
         </section>
     );
 }

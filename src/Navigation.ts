@@ -15,6 +15,18 @@
 //     },
 // };
 
+export const Nav = {
+    card: {
+        byId: (id: number) => `/card/${id}`,
+    },
+    ids: {
+        goldenBar: "/#goldenbar",
+        packages: "#packages",
+        coctails: "#coctails",
+        // packages: "#packages",
+    },
+};
+
 // /orders
 // /orders/type/5
 // /orders/sales/test

@@ -30,6 +30,16 @@ html {
 
 body {
     background-color: #222;
+    padding-top: 91px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
