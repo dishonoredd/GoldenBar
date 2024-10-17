@@ -2,6 +2,40 @@ import Slider, { CustomArrowProps } from "react-slick";
 import b from "/src/styles/slider.module.css";
 import { slides } from "./slides";
 
+function SampleNextArrow(props: CustomArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                display: "block",
+                position: "absolute",
+                right: "-220px",
+                transform: "scale(2.7)",
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props: CustomArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                display: "block",
+                position: "absolute",
+                left: "-220px",
+                transform: "scale(2.7)",
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
 export function MySlider() {
     const settings = {
         dots: true,
@@ -12,40 +46,6 @@ export function MySlider() {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
     };
-
-    function SampleNextArrow(props: CustomArrowProps) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{
-                    ...style,
-                    display: "block",
-                    position: "absolute",
-                    right: "-220px",
-                    transform: "scale(2.7)",
-                }}
-                onClick={onClick}
-            />
-        );
-    }
-
-    function SamplePrevArrow(props: CustomArrowProps) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{
-                    ...style,
-                    display: "block",
-                    position: "absolute",
-                    left: "-220px",
-                    transform: "scale(2.7)",
-                }}
-                onClick={onClick}
-            />
-        );
-    }
 
     return (
         <section className={b.section} id="coctails">
