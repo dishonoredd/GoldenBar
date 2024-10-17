@@ -7,20 +7,28 @@ import { MySlider } from "./components/MySlider";
 import { Packets } from "./components/Packets";
 import { Route, Routes } from "react-router-dom";
 import { CardDetail } from "./components/CardDetail";
+import { Footer } from "./components/Footer";
+import { Information } from "./components/Information";
 
 function App() {
     return (
         <>
             <Header />
             <Routes>
-                <Route path="/card/:id" element={<CardDetail />} />
+                <Route
+                    path="/card/:id"
+                    element={<CardDetail text={"efef"} image={"wefwef"} />}
+                />
                 <Route
                     path="/"
                     element={
                         <>
                             <MainPage />
-                            <MySlider />
+
                             <Packets />
+                            <MySlider />
+                            <Information />
+                            <Footer />
                         </>
                     }
                 />

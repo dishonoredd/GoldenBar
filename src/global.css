@@ -15,22 +15,22 @@ img {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 95px;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #393939;
+    background-color: #222;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #222;
+    background-color: #1b1b1b;
 }
 
 body {
-    background-color: #222;
-    padding-top: 91px;
+    background-color: #1b1b1b;
+    padding-top: 87px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -44,4 +44,13 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: white !important;
+}
+
+.slick-dots li button:before {
+    color: white !important;
 }

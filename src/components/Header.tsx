@@ -15,14 +15,16 @@ export function Header() {
                 </div>
 
                 <div className={css.div}>
-                    <p className={css.header__p}>Информация</p>
-                    <a href="#packages" className={css.header__p}>
+                    <a href={Nav.ids.information} className={css.header__p}>
+                        Информация
+                    </a>
+                    <a href={Nav.ids.footer} className={css.header__p}>
                         Контакты
                     </a>
                     <a href={Nav.ids.coctails} className={css.header__p}>
                         Коктейли
                     </a>
-                    <a href="#packages" className={css.header__p}>
+                    <a href={Nav.ids.packages} className={css.header__p}>
                         Предложения
                     </a>
                 </div>

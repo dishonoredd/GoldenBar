@@ -1,7 +1,12 @@
 import { useParams } from "react-router-dom";
 import css from "/src/styles/card-detail.module.css";
 
-export function CardDetail() {
+type CardDetailProps = {
+    text: string;
+    image: string;
+};
+
+export function CardDetail(props: CardDetailProps) {
     const { id } = useParams<{ id: string }>();
 
     return (

@@ -1,9 +1,10 @@
 .section {
-    background-color: #222;
+    background-color: #1b1b1b;
     height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .main {

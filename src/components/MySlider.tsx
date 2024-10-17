@@ -22,7 +22,8 @@ export function MySlider() {
                     ...style,
                     display: "block",
                     position: "absolute",
-                    right: "-150px",
+                    right: "-220px",
+                    transform: "scale(2.7)",
                 }}
                 onClick={onClick}
             />
@@ -38,7 +39,8 @@ export function MySlider() {
                     ...style,
                     display: "block",
                     position: "absolute",
-                    left: "-150px",
+                    left: "-220px",
+                    transform: "scale(2.7)",
                 }}
                 onClick={onClick}
             />
@@ -49,6 +51,7 @@ export function MySlider() {
         <section className={b.section} id="coctails">
             <div className={b.main}>
                 <h1 className={b.h1}>Авторские коктейли</h1>
+
                 <Slider {...settings}>
                     {slides.map((slide) => (
                         <div style={{ outline: "none" }} key={slide.id}>

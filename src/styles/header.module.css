@@ -1,8 +1,8 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #222;
-    padding: 30px;
+    background-color: #1b1b1b;
+    padding: 31px;
     gap: 30px;
     width: 100%;
     position: fixed;
@@ -16,7 +16,6 @@
     transition: 0.22s ease;
     cursor: pointer;
     padding-left: 30px;
-    font-weight: 500;
 }
 
 .logo:hover {
@@ -27,7 +26,7 @@
     color: white;
     transition: 0.22s ease;
     cursor: pointer;
-    font-weight: 500;
+
     font-size: 18px;
 }
 
