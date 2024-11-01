@@ -15,10 +15,7 @@ function App() {
         <>
             <Header />
             <Routes>
-                <Route
-                    path="/card/:id"
-                    element={<CardDetail text={"efef"} image={"wefwef"} />}
-                />
+                <Route path="/card/:id" element={<CardDetail />} />
                 <Route
                     path="/"
                     element={
