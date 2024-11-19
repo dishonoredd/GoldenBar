@@ -1,0 +1,41 @@
+.opened {
+    transform: translateX(100%);
+}
+
+.closeBtn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 0px;
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header__p {
+    font-size: 20px;
+    color: #000000;
+}
+
+.svg__container {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}

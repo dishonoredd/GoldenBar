@@ -9,11 +9,17 @@ import { Route, Routes } from "react-router-dom";
 import { CardDetail } from "./components/CardDetail";
 import { Footer } from "./components/Footer";
 import { Information } from "./components/Information";
+import { useState } from "react";
+import { BurgerMenue } from "./components/BurgerMenue";
 
 function App() {
+    const [open, setOpen] = useState(false);
+    const setState = () => {
+        setOpen(!open);
+    };
     return (
         <>
-            <Header />
+            <Header func={setState} />
             <Routes>
                 <Route path="/card/:id" element={<CardDetail />} />
                 <Route
@@ -21,7 +27,6 @@ function App() {
                     element={
                         <>
                             <MainPage />
-
                             <Packets />
                             <MySlider />
                             <Information />
@@ -30,6 +35,7 @@ function App() {
                     }
                 />
             </Routes>
+            <BurgerMenue value={open} setOpen={setOpen} />
         </>
     );
 }

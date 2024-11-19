@@ -17,3 +17,13 @@
     font-size: 35px;
     color: #1b1b1b;
 }
+
+@media screen and (max-width: 576px) {
+    .h1 {
+        font-size: 50px;
+    }
+
+    .p {
+        font-size: 20px;
+    }
+}

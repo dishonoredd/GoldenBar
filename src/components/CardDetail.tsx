@@ -11,7 +11,7 @@ export function CardDetail() {
         <div className={css.main}>
             <img src={packet.photo} alt="" />
             <p>{packet.text}</p>
-            <h1>Карточка {Number(id) + 1}</h1>
+            <h1>Картf {Number(id) + 1}</h1>
         </div>
     );
 }

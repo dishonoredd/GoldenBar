@@ -7,7 +7,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(35, 35, 35);
 }
 
 .logo {
@@ -40,6 +40,13 @@
     justify-content: center;
     gap: 12px;
 }
+.div1 {
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .svg__container {
     display: flex;
@@ -47,4 +54,30 @@
     justify-content: center;
     gap: 12px;
     padding-right: 30px;
+}
+
+.burgerBtn {
+    font-size: 35px;
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .burgerBtn {
+        display: flex;
+    }
+    .div {
+        display: none;
+    }
+    .div1 {
+        display: flex;
+    }
+    .svg__container {
+        display: none;
+    }
+    .header {
+        padding: 30px;
+    }
 }

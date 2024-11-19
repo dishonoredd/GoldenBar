@@ -12,7 +12,7 @@ type CardProps = {
 export function Card(props: CardProps) {
     return (
         <>
-            <div>
+            <div className={card.container}>
                 <h3 className={card.title}>{props.name}</h3>
                 <img className={card.img} src={props.photo} alt="" />
                 <div className={card.btnContainer}>
