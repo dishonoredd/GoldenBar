@@ -33,8 +33,8 @@ export function Header(props: HeaderProps) {
                     </a>
                 </div>
                 <div className={css.svg__container}>
-                    <TelegramIcon width={35} height={35} color={"#ffffff"} />
-                    <WhatsapIcon width={35} height={35} color={"#ffffff"} />
+                    <TelegramIcon width={34} height={34} color={"#ffffff"} />
+                    <WhatsapIcon width={34} height={34} color={"#ffffff"} />
                 </div>
 
                 <div className={css.div1}>
